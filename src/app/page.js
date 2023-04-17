@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import profilePic from './assets/me.webp'
 import { professionalData } from './data'
@@ -8,11 +9,11 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-around p-24">
-      <div className='flex flex-row justify-center items-center mb-12'>
+      <div className='flex flex-col md:flex-row justify-center items-center mb-12'>
          <Image
             src={profilePic}
             alt="Picture of the author"
-            className='max-w-sm mr-8'
+            className='max-w-sm mb-6 md:mr-8'
           />
           <div>
             <h1 className='text-4xl font-bold mb-2'>Boris Belov</h1>
@@ -29,23 +30,25 @@ export default function Home() {
             </ul>
           </div>
       </div>
-      <ul className='flex flex-row'>
-        <li className='font-light mb-2 mr-2 text-slate-100'>
-          <a 
-            className='underline decoration-solid underline-offset-4 hover:text-purple-400'
-            href='https://www.notion.so/belov-boris-4d8c2080ed0641e983409ecba208ea47'>CV</a>
+      <h2 className='mb-8'>Selected projects</h2>
+      <ul className='w-full flex gap-8'>
+        <li className='w-4/12 '>
+          <Link href="/uchi" className='flex flex-col justify-center p-6 rounded-lg bg-slate-800'>
+            <h3 className='text-center'>UCHI.ru</h3>
+            <button>See details</button>
+          </Link>
         </li>
-        <li className='font-light mb-2 mr-2 text-slate-100'>
-          <a className='underline decoration-solid underline-offset-4 hover:text-purple-400'
-            href='https://www.linkedin.com/in/boris-belov-48a20448/'>LinkedIn</a>
+        <li className='w-4/12 '>
+          <Link href="/" className='flex flex-col justify-center p-6 rounded-lg bg-slate-800'>
+            <h3 className='text-center'>MegaFon</h3>
+            <button>See details</button>
+          </Link>
         </li>
-        <li className='font-light mb-2 mr-2 text-slate-100'>
-          <a className='underline decoration-solid underline-offset-4 hover:text-purple-400'
-            href='https://github.com/borisbell'>GitHub</a>
-        </li>
-        <li className='font-light mb-2 mr-2 text-slate-100'>
-          <a  className='underline decoration-solid underline-offset-4 hover:text-purple-400' 
-            href='https://www.instagram.com/borisbell/'>Instagram</a>
+        <li className='w-4/12 '>
+          <Link href="/" className='flex flex-col justify-center p-6 rounded-lg bg-slate-800'>
+            <h3 className='text-center'>Lenta</h3>
+            <button>See details</button>
+          </Link>
         </li>
       </ul>
     </main>

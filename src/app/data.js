@@ -25,4 +25,22 @@ export const professionalData = {
             dates: "(2017 – 2020)",
 		},
 	],
+    footer_links: [
+        {
+            link: 'https://www.notion.so/belov-boris-4d8c2080ed0641e983409ecba208ea47',
+            text: 'CV',
+        },
+        {
+            link: 'https://www.linkedin.com/in/boris-belov-48a20448/',
+            text: 'LinkedIn',
+        },
+        {
+            link: 'https://github.com/borisbell',
+            text: 'GitHub',
+        },
+        {
+            link: 'https://www.instagram.com/borisbell/',
+            text: 'Instagram',
+        },
+    ]
 };
